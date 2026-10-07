@@ -1,0 +1,29 @@
+file,field,type,description
+rows,row_id,string,"Unique id: platform code, product code, market code."
+rows,edition,string,Dataset edition. This file is 2026-Q4.
+rows,platform_id,string,"Short platform id: google_ads, meta, microsoft_ads, tiktok, x, linkedin, reddit."
+rows,platform,string,Platform name.
+rows,product,string,"forex_cfd (forex and CFD brokers), crypto_exchange (crypto exchanges and wallets), prop_firm (prop trading firms with paid challenges)."
+rows,market,string,"Market code: ISO 3166 alpha 2, or EEA_OTHER (EEA countries other than Germany) or ROW (platform default where no country rule applies)."
+rows,market_name,string,Market name in plain words.
+rows,status,string,"The strictest gate that applies. One of: allowed, restricted, no_specific_rule, licence_needed, verification_needed, written_permission_needed, not_allowed, unclear."
+rows,requirement,string,"What an advertiser must do, in plain words."
+rows,accepted_regulators,string,"Regulators the platform names for this market, if any."
+rows,targeting_limits,string,"Age or targeting limits the platform names, if any."
+rows,policy_title,string,Title of the official policy page.
+rows,policy_url,string,Link to the official policy page.
+rows,policy_quote,string,"Short verbatim quote (25 words or fewer) from the official page that supports the status. ""..."" marks a cut."
+rows,quote_verified,string,yes = quote matched against the live page in a browser on 2026-10-07; manual_check = not yet matched.
+rows,effective_date,date,"Date the rule took effect, when the platform states it. Blank if not stated."
+rows,checked_on,date,Date the page was checked.
+rows,notes,string,"Extra context, exceptions and our reading where the page is not explicit."
+rows,confidence,string,high = quoted from the official page for this market; medium = official global rule applied to this market; low = rule is ambiguous or the page could not be fully read.
+changes,date,date,Date of the policy change or notice.
+changes,date_precision,string,"day, or month when the source gives only a month (date set to the 1st)."
+changes,platform_id,string,Short platform id.
+changes,platform,string,Platform name.
+changes,product,string,"forex_cfd, crypto_exchange, prop_firm, or all_financial."
+changes,markets,string,"Market codes, comma separated, or global."
+changes,change,string,"What changed, in plain words."
+changes,source_url,string,Where the change was published.
+changes,source_type,string,platform_notice (official) or press.

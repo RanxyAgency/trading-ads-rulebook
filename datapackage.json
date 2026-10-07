@@ -1,0 +1,213 @@
+{
+  "profile": "tabular-data-package",
+  "name": "trading-ads-rulebook",
+  "version": "2026.4.0",
+  "title": "Trading Ads Rulebook, edition 2026-Q4",
+  "description": "Ad policy rules for forex and CFD brokers, crypto exchanges and prop trading firms on 7 ad platforms in 16 markets, with quotes from official policy pages and a change log for 2025 to 2026.",
+  "id": "https://doi.org/10.5281/zenodo.23219882",
+  "homepage": "https://ranxy.com/reports/trading-ads-rulebook/",
+  "created": "2026-10-07T00:00:00Z",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Ranxy",
+      "path": "https://ranxy.com/",
+      "role": "publisher"
+    },
+    {
+      "title": "David Ispiryan",
+      "path": "https://orcid.org/0009-0006-6727-6302",
+      "role": "author",
+      "organization": "Ranxy"
+    }
+  ],
+  "keywords": [
+    "advertising policy",
+    "forex",
+    "CFD",
+    "crypto",
+    "prop trading",
+    "Google Ads",
+    "Meta",
+    "TikTok",
+    "compliance",
+    "fintech marketing"
+  ],
+  "resources": [
+    {
+      "name": "rulebook",
+      "path": "trading-ads-rulebook-2026-Q4.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "row_id",
+            "type": "string",
+            "description": "Unique id: platform code, product code, market code."
+          },
+          {
+            "name": "edition",
+            "type": "string",
+            "description": "Dataset edition. This file is 2026-Q4."
+          },
+          {
+            "name": "platform_id",
+            "type": "string",
+            "description": "Short platform id: google_ads, meta, microsoft_ads, tiktok, x, linkedin, reddit."
+          },
+          {
+            "name": "platform",
+            "type": "string",
+            "description": "Platform name."
+          },
+          {
+            "name": "product",
+            "type": "string",
+            "description": "forex_cfd (forex and CFD brokers), crypto_exchange (crypto exchanges and wallets), prop_firm (prop trading firms with paid challenges)."
+          },
+          {
+            "name": "market",
+            "type": "string",
+            "description": "Market code: ISO 3166 alpha 2, or EEA_OTHER (EEA countries other than Germany) or ROW (platform default where no country rule applies)."
+          },
+          {
+            "name": "market_name",
+            "type": "string",
+            "description": "Market name in plain words."
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "The strictest gate that applies. One of: allowed, restricted, no_specific_rule, licence_needed, verification_needed, written_permission_needed, not_allowed, unclear."
+          },
+          {
+            "name": "requirement",
+            "type": "string",
+            "description": "What an advertiser must do, in plain words."
+          },
+          {
+            "name": "accepted_regulators",
+            "type": "string",
+            "description": "Regulators the platform names for this market, if any."
+          },
+          {
+            "name": "targeting_limits",
+            "type": "string",
+            "description": "Age or targeting limits the platform names, if any."
+          },
+          {
+            "name": "policy_title",
+            "type": "string",
+            "description": "Title of the official policy page."
+          },
+          {
+            "name": "policy_url",
+            "type": "string",
+            "description": "Link to the official policy page."
+          },
+          {
+            "name": "policy_quote",
+            "type": "string",
+            "description": "Short verbatim quote (25 words or fewer) from the official page that supports the status. \"...\" marks a cut."
+          },
+          {
+            "name": "quote_verified",
+            "type": "string",
+            "description": "yes = quote matched against the live page in a browser on 2026-10-07; manual_check = not yet matched."
+          },
+          {
+            "name": "effective_date",
+            "type": "date",
+            "description": "Date the rule took effect, when the platform states it. Blank if not stated."
+          },
+          {
+            "name": "checked_on",
+            "type": "date",
+            "description": "Date the page was checked."
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": "Extra context, exceptions and our reading where the page is not explicit."
+          },
+          {
+            "name": "confidence",
+            "type": "string",
+            "description": "high = quoted from the official page for this market; medium = official global rule applied to this market; low = rule is ambiguous or the page could not be fully read."
+          }
+        ]
+      }
+    },
+    {
+      "name": "changes",
+      "path": "trading-ads-rulebook-changes-2026-Q4.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "schema": {
+        "fields": [
+          {
+            "name": "date",
+            "type": "date",
+            "description": "Date of the policy change or notice."
+          },
+          {
+            "name": "date_precision",
+            "type": "string",
+            "description": "day, or month when the source gives only a month (date set to the 1st)."
+          },
+          {
+            "name": "platform_id",
+            "type": "string",
+            "description": "Short platform id."
+          },
+          {
+            "name": "platform",
+            "type": "string",
+            "description": "Platform name."
+          },
+          {
+            "name": "product",
+            "type": "string",
+            "description": "forex_cfd, crypto_exchange, prop_firm, or all_financial."
+          },
+          {
+            "name": "markets",
+            "type": "string",
+            "description": "Market codes, comma separated, or global."
+          },
+          {
+            "name": "change",
+            "type": "string",
+            "description": "What changed, in plain words."
+          },
+          {
+            "name": "source_url",
+            "type": "string",
+            "description": "Where the change was published."
+          },
+          {
+            "name": "source_type",
+            "type": "string",
+            "description": "platform_notice (official) or press."
+          }
+        ]
+      }
+    },
+    {
+      "name": "data-dictionary",
+      "path": "data-dictionary.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8"
+    }
+  ]
+}

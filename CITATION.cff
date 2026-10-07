@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+type: dataset
+title: "Trading Ads Rulebook, edition 2026-Q4"
+authors:
+  - name: "Ranxy"
+    website: "https://ranxy.com/"
+  - family-names: "Ispiryan"
+    given-names: "David"
+    orcid: "https://orcid.org/0009-0006-6727-6302"
+    affiliation: "Ranxy"
+version: "2026-Q4"
+doi: "10.5281/zenodo.23219882"
+date-released: "2026-10-07"
+license: CC-BY-4.0
+url: "https://ranxy.com/reports/trading-ads-rulebook/"
+repository: "https://github.com/RanxyAgency/trading-ads-rulebook"
+keywords:
+  - advertising policy
+  - forex ads
+  - crypto ads
+  - prop firm ads
+  - Google Ads
+  - Meta ads
